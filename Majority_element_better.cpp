@@ -2,7 +2,7 @@
 #include <vector>
 #include<unordered_map>
 using namespace std;
-int Majority_element_optimal(vector<int> &nums)
+int Majority_element_better(vector<int> &nums)
 {
 
     int n = nums.size();
@@ -12,18 +12,24 @@ int Majority_element_optimal(vector<int> &nums)
         mpp[nums[i]]++;
     }
 
-    int maxi = mpp[nums[0]];
-    int ans = nums[0];
-    for (auto it : mpp)
-    {
-        if (it.second > maxi)
-        {
-            maxi = it.second;
-            ans = it.first;
+    // int maxi = mpp[nums[0]];
+    // int ans = nums[0];
+    // for (auto it : mpp)
+    // {
+    //     if (it.second > maxi)
+    //     {
+    //         maxi = it.second;
+    //         ans = it.first;
+    //     }
+    // }
+
+    for(auto it : mpp) {
+        if(it.second > (n/2)) {
+            return it.first;
         }
     }
 
-    return ans;
+    return -1;
 }
 int main()
 {
@@ -37,5 +43,5 @@ int main()
         cin >> nums[i];
     }
 
-    Majority_element_optimal(nums);
+    Majority_element_better(nums);
 }
