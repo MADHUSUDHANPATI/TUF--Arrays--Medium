@@ -21,7 +21,7 @@ void Re_arrange_Array_with_Sign_optimal(vector<int> & nums){
     }
 
     for( auto it : ans) {
-        cout << it << "";
+        cout << it << " ";
     }
 }
 int main() {

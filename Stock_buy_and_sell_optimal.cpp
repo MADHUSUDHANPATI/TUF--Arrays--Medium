@@ -1,7 +1,7 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-int Stock_buy_and_sell_brute(vector<int> & nums) {
+int Stock_buy_and_sell_optimal(vector<int> & nums) {
 
     int n = nums.size();
     int mini=nums[0];
@@ -23,5 +23,5 @@ int main() {
         cin >> nums[i];
     }
 
-    cout << Stock_buy_and_sell_brute(nums);
+    cout << Stock_buy_and_sell_optimal(nums);
 }
